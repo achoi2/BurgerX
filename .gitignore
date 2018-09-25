@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+database.js
 
 # testing
 /coverage
