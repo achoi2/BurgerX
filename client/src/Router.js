@@ -4,7 +4,8 @@ import NavBar from "./Components/NavBar";
 import LandingPage from "./Components/LandingPage";
 import Footer from "./Components/Footer";
 import Checkout from "./Components/Checkout";
-import ReservationPage from './Components/Pages/ReservationPage';
+import MenuPage from './Components/MenuPage';
+import ReservationPage from './Components/ReservationPage';
 
 const Router = () => {
   return (
