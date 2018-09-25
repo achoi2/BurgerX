@@ -15,7 +15,7 @@ const MenuPage = (props) => {
               <button>{`${item.thumbsup}👍`}
               </button>
               <button onClick={ () =>
-                props.dispatch({type: "ADD", payload: item.id})
+                props.dispatch({type: "ADD", payload: item})
               }>Add to Order
               </button>
             </li> 

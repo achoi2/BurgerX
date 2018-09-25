@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import Form from "../Form";
+import Form from "./Form";
 
 class ReservationPage extends React.Component {
   constructor(props) {
