@@ -12,7 +12,8 @@ const MenuPage = (props) => {
               <h2>{item.title}</h2>
               <p>{item.details}</p>
               <h3>{`$${item.price}`}</h3>
-              <p>{`${item.thumbsup}👍`}</p>
+              <button>{`${item.thumbsup}👍`}
+              </button>
               <button onClick={ () =>
                 props.dispatch({type: "ADD", payload: item.id})
               }>Add to Order

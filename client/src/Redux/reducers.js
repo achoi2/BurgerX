@@ -4,7 +4,7 @@ const reducers = (oldState, action) => {
             ...oldState, 
             cartItems: [...oldState.cartItems, action.payload]
         }
-    }    
+    }
     return oldState;
 }
 
