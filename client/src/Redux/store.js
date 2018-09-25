@@ -8,7 +8,8 @@ let initialState = {
         {id: "3", title: "Space Shake", details: "Cool your jets with this steller milkshake", price: 6, thumbsup: 9},
         {id: "4", title: "Mars Nuggets", details: "Best fried chicken on the planet", price: 8, thumbsup: 3},
     ],
-    cartItems: []
+    cartItems: [{ id: "3", title: "Space Shake", details: "Cool your jets with this steller milkshake", price: 6, thumbsup: 9 },
+        { id: "4", title: "Mars Nuggets", details: "Best fried chicken on the planet", price: 8, thumbsup: 3 },]
 }
 
 let store = createStore(reducer, initialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
