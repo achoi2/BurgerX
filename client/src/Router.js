@@ -13,6 +13,7 @@ const Router = () => {
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/reservations" component={ReservationPage} />
+          <Route exact path="/menu" component={MenuPage} />
         </Switch>
         <Footer />
       </div>
