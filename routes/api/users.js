@@ -1,6 +1,6 @@
 const express = require("express");
-const rouuter = express.Router();
+const router = express.Router();
 
-rouuter.get("/", (req, res) => res.json({ msg: "GET USER" }));
+router.get("/", (req, res) => res.json({ msg: "GET USER" }));
 
-module.exports = rouuter;
+module.exports = router;
