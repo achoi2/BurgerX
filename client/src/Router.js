@@ -1,4 +1,5 @@
 import React from "react";
+import { HashRouter as Router, Switch } from "react-dom";
 import NavBar from "./Components/NavBar";
 import LandingPage from "./Components/LandingPage";
 import Footer from "./Components/Footer";
