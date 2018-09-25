@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import reducer from 'reducers.js';
+import reducer from './reducers.js';
 
 let initialState = {
     menu: [
