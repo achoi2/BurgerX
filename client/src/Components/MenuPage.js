@@ -8,16 +8,18 @@ const MenuPage = (props) => {
       <ul>
         {
           props.menu.map(item =>
-            <li key={item.id}>
-              <h2>{item.title}</h2>
-              <p>{item.details}</p>
-              <h3>{`$${item.price}`}</h3>
-              <button>{`${item.thumbsup}👍`}
+            <li key={item.id} className="card">
+              <div className="card-body">
+                <h2>{item.title}</h2>
+                <p className="card-text">{item.details}</p>
+                <h3>{`$${item.price}`}</h3>
+                <button className="btn btn-light">{`${item.thumbsup}👍`}
+                </button>
+                <button onClick={() =>
+                  props.dispatch({ type: "ADD", payload: item })
+                } className="btn btn-dark">Add to Order
               </button>
-              <button onClick={ () =>
-                props.dispatch({type: "ADD", payload: item})
-              }>Add to Order
-              </button>
+              </div> 
             </li> 
           )
         }
