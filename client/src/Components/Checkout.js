@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 const OrdersList = (props) => {
   let total = 0;
   props.cartItems.forEach(item => {
-    total += parseInt(item.price)
+    total += item.price
     });
   
 
