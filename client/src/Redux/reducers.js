@@ -3,7 +3,7 @@ const reducers = (oldState, action) => {
       return {
           ...oldState,
           reservations:[...oldState.reservations, action.reserve]
-      }   
+      } 
   } else if (action.type === "ADD") {
       return {
           ...oldState,
@@ -17,7 +17,13 @@ const reducers = (oldState, action) => {
         ...oldState,
         cartItems: newCartItems
     } 
-    } else {
+    } else if (action.type === 'REGISTER_ADMIN')  {
+        return {
+            ...oldState,
+            admin:[...oldState.admin, action.adminReg]
+        } 
+    }
+    else {
         return oldState;
     }
 }

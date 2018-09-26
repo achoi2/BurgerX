@@ -64,16 +64,3 @@ const ConnectReservationPage = connect(state => ({
 }));
 export default ConnectReservationPage(ReservationPage);
 
-// client: "",
-//       phone: "",
-//       partySize: 0
-
-// const URL = 'http://localhost:5000/api/reservations/reserve';
-//     const response = await fetch(URL, {
-//       method:'POST'
-//     }).then(result => await response.json());
-//     this.setState({reservations:result});
-
-// client={client}
-//         phone={phone}
-//         partySize={partySize}
