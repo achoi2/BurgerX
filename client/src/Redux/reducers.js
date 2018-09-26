@@ -1,18 +1,25 @@
 const reducers = (oldState, action) => {
-  if(action.type === 'RESERVE_TABLE') {
+  if (action.type === 'RESERVE_TABLE') {
       return {
           ...oldState,
           reservations:[...oldState.reservations, action.reserve]
       }   
- }
-
-    if (action.type === "ADD") {
-        return {
-            ...oldState, 
-            cartItems: [...oldState.cartItems, action.payload]
-        }
+  } else if (action.type === "ADD") {
+      return {
+          ...oldState,
+          cartItems: [...oldState.cartItems, action.payload]
+      }
+ } else if (action.type === "REMOVE_ITEM") { 
+    const newCartItems = oldState.cartItems.filter(item => {
+     return item.id !== action.payload.id
+    }); 
+    return {
+        ...oldState,
+        cartItems: newCartItems
+    } 
+    } else {
+        return oldState;
     }
-    return oldState;
 }
 
 export default reducers;

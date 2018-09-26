@@ -5,10 +5,11 @@ const OrdersList = (props) => {
   let total = 0;
   props.cartItems.forEach(item => {
     total += parseInt(item.price)
-    })
+    });
   
-  let removeOrder = () => {
-    
+
+  let removeOrder = (item) => {
+    props.dispatch({ type: 'REMOVE_ITEM', payload: item  })
   }
   return (
     <div>
@@ -16,7 +17,7 @@ const OrdersList = (props) => {
         return <li key={item.id}>
         {item.title}
         {item.price}
-        <button onClick={removeOrder}>Remove</button>
+        <button onClick={() => removeOrder(item)}>Remove</button>
         </li>
       })}
       <h3>Your total is ${total}</h3>
