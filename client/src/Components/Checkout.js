@@ -17,7 +17,7 @@ const OrdersList = (props) => {
         return <li key={item.id}>
         {item.title}
         {item.price}
-        <button onClick={() => removeOrder(item)}>Remove</button>
+          <button onClick={() => removeOrder(item)} className="btn btn-danger">Remove</button>
         </li>
       })}
       <h3>Your total is ${total}</h3>
