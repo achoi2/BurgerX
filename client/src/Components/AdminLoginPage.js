@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AdminLoginForm from "./AdminLoginForm";
 import { connect } from "react-redux";
-import {withRouter} from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 
 class AdminLoginPage extends Component {
   constructor(props) {
@@ -34,20 +34,27 @@ class AdminLoginPage extends Component {
     let submitForm = e => {
       e.preventDefault();
       loginAdmin(this.state);
+      this.props.history.push("/management");
       dispatch({
         type: "REGISTER_ADMIN",
-        adminReg: this.state,
+        adminReg: this.state
       });
-      this.props.hitory.push('/management');
     };
 
     const { email, user_password } = this.state;
     const { dispatch } = this.props;
-    return <AdminLoginForm email={email} user_password={user_password} submitForm={submitForm} handleChange={handleChange} />;
+    return (
+      <AdminLoginForm
+        email={email}
+        user_password={user_password}
+        submitForm={submitForm}
+        handleChange={handleChange}
+      />
+    );
   }
 }
 
 const ConnectAdminPage = connect(state => ({
   admin: state.admin
 }));
-export default ConnectAdminPage(AdminLoginPage);
+export default withRouter(ConnectAdminPage(AdminLoginPage));

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const AdminLoginForm = ({ email, user_password, handleChange, submitForm }) => {
   return (
