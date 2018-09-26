@@ -3,7 +3,7 @@ const router = express.Router();
 const DB = require("../../database");
 
 router.get("/", (req, res) => {
-  DB.one("SELECT * FROM reservations")
+  DB.any("SELECT * FROM reservations")
     .then(data => res.json(data))
     .catch(err => {
       console.log(err);
