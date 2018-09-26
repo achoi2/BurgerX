@@ -1,4 +1,6 @@
 body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -6,4 +8,11 @@ body {
 
 :root {
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.registreForm {
+  box-shadow: var(--shadow);
+  width: 30%;
+  margin: 0 auto;
+  padding: 1rem;
 }
