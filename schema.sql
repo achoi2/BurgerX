@@ -12,3 +12,11 @@ CREATE TABLE reservations (
   reserve_date VARCHAR(255),
   reserved_time VARCHAR(255)
 );
+
+CREATE TABLE menu (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255),
+  details VARCHAR(255),
+  price INTEGER,
+  thumbsup INTEGER
+);
