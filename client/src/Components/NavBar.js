@@ -13,6 +13,7 @@ const NavBar = () => {
         </li>
         <li><Link to="/menu">Menu</Link></li>
         <li><Link to="/checkout">Checkout</Link></li>
+        <li><Link to="/reserved">Reserved</Link></li>
       </ul>
     </nav>
   )
