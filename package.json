@@ -7,7 +7,7 @@
     "start": "node app.js",
     "server": "nodemon app.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run start\" \"npm run client\"",
     "resetdb": "dropdb restaurant; createdb restaurant; psql -d restaurant -f schema.sql; psql -d restaurant -f seed.sql"
   },
   "repository": {

@@ -33,10 +33,12 @@ let initialState = {
     }
   ],
   cartItems: [],
-  reservations:[],
   backlog:[],
+  reservations:[],
   admin:[]
 };
+
+
 
 let store = createStore(
   reducer,
