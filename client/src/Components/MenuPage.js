@@ -49,6 +49,7 @@ class MenuPage extends React.Component {
             {
               this.state.menu.map(item =>
                 <li key={item.id}>
+                  <img src={item.imageurl} />
                   <h2>{item.title}</h2>
                   <p>{item.details}</p>
                   <h3>{`$${item.price}`}</h3>
