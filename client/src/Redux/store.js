@@ -34,6 +34,7 @@ let initialState = {
   ],
   cartItems: [],
   backlog:[],
+  reservations:[],
   admin:[]
 };
 
