@@ -3,16 +3,24 @@ import {Link} from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <nav>
-      <ul className="nav">
-        <li><Link to="/" className="nav-link active">Home</Link></li>
-        <li><Link to="/reservations" className="nav-link active">Reservations</Link></li>
-        <li><Link to="/menu" className="nav-link active">Menu</Link></li>
-        <li><Link to="/checkout" className="nav-link active">Checkout</Link></li>
-        <li><Link to="/reserved" className="nav-link active">Reserved</Link></li>
-        <li><Link to="/admin" className="nav-link active">Log In</Link></li>
-      </ul>
-    </nav>
+      <nav className="navbar navbar-expand-md navbar-light bg-light">
+        <div className="container">
+        <h3>Anamanicas</h3>
+        <button className="navbar-toggler" data-toggle="collapse" data-target="#">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="#">
+            <ul className="navbar-nav ml-auto ">
+              <li className="nav-item"><Link to="/" className="nav-link active">Home</Link></li>
+              <li className="nav-item"><Link to="/reservations" className="nav-link active">Reservations</Link></li>
+              <li className="nav-item"><Link to="/menu" className="nav-link active">Menu</Link></li>
+              <li className="nav-item"><Link to="/checkout" className="nav-link active">Checkout</Link></li>
+              <li className="nav-item"><Link to="/reserved" className="nav-link active">Reserved</Link></li>
+              <li className="nav-item"><Link to="/admin" className="nav-link active">Log In</Link></li>
+            </ul>
+          </div>
+        </div> 
+      </nav> 
   )
 }
 
