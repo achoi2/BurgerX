@@ -21,6 +21,7 @@ const OrdersList = (props) => {
         </li>
       })}
       <h3>Your total is ${total}</h3>
+      <button className="btn btn-primary">Checkout</button>
     </div>
   );
 };
