@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Styles/landing.css';
 import musk from '../Media/musk.jpeg';
+import Footer from './Footer';
 
 const LandingPage = () => {
   return (
@@ -24,6 +25,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

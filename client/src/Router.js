@@ -2,7 +2,6 @@ import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import LandingPage from "./Components/LandingPage";
-import Footer from "./Components/Footer";
 import Checkout from "./Components/Checkout";
 import MenuPage from './Components/MenuPage';
 import ReservationPage from './Components/ReservationPage';
@@ -31,7 +30,6 @@ const Router = () => {
           <Route exact path="/management/update" component={UpdateMenu} />
           <Route exact path="/management/delete" component={DeleteFromMenu} />
         </Switch>
-        <Footer />
       </div>
     </HashRouter>
   );
