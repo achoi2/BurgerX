@@ -1,0 +1,11 @@
+.image {
+  background-image: url(../Media/spacex.jpg);
+  height: 28em;
+  background-size: cover;
+  background-position: center;
+}
+
+.pic {
+  width: 25em;
+  height: 20em;
+}

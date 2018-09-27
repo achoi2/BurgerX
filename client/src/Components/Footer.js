@@ -1,11 +1,12 @@
 import React from 'react'
 
 export default () => {
-  return (
-    <footer className="mt-5 text-center">
-        Copyright &copy; Elon's Restaurant {new Date().getFullYear()} 
-    </footer>
-  )
+  return <footer className="p-3 text-center text-white bg-secondary">
+          <div>
+              <h4>Copyright &copy; BurgerX</h4>
+              {new Date().getFullYear()}
+          </div>
+      </footer>;
 }
 
 
