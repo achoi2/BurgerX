@@ -4,7 +4,12 @@ const reducers = (oldState, action) => {
           ...oldState,
           reservations:[...oldState.reservations, action.reserve]
       } 
-  } else if (action.type === "ADD") {
+  } else if (action.type === "MENU_TABLE") {
+      return {
+          ...oldState,
+          menu:[...oldState.menu, action.newitem]
+      }
+ } else if (action.type === "ADD") {
       return {
           ...oldState,
           cartItems: [...oldState.cartItems, action.payload]
