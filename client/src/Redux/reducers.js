@@ -39,10 +39,10 @@ const reducers = (oldState, action) => {
     }
     else if(action.type === 'UPDATE') {
       const updatedMenu = {
-          title: action.menu.title,
-          details: action.menu.details,
-          price: action.menu.price,
-          thumbsup: action.menu.thumbsup
+          title: action.title,
+          details: action.details,
+          price: action.price,
+          thumbsup: action.thumbsup
       }
       return {
           ...oldState,
