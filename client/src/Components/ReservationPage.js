@@ -6,25 +6,31 @@ class ReservationPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      client:'',
-      phone:'',
-      party_size:0,
-      reserve_date:'',
-      reserved_time:''
+      client: "",
+      phone: "",
+      party_size: 0,
+      reserve_date: "",
+      reserved_time: ""
     };
   }
 
   render() {
-    const { client, phone, party_size, reserve_date, reserved_time } = this.state;
+    const {
+      client,
+      phone,
+      party_size,
+      reserve_date,
+      reserved_time
+    } = this.state;
     const { dispatch } = this.props;
 
-    let postReservation = async (state) => {
+    let postReservation = async state => {
       await fetch("http://localhost:5000/api/reservations/reserve", {
         method: "POST",
-        headers:{
-          "Content-Type":"application/json"
+        headers: {
+          "Content-Type": "application/json"
         },
-        body:JSON.stringify(state)
+        body: JSON.stringify(state)
       })
         .then(result => console.log(result))
         .catch(err => console.log(err));
@@ -35,26 +41,30 @@ class ReservationPage extends React.Component {
       newState[updated] = e.target.value;
       this.setState(newState);
     };
-  
+
     let submitForm = e => {
       e.preventDefault();
-      postReservation(this.state)
+      postReservation(this.state);
       dispatch({
         type: "RESERVE_TABLE",
-        reserve: this.state,
+        reserve: this.state
       });
     };
 
     return (
+      <div className="container">
+      <div className="row justify-content-center registreForm">
       <Form
-        client={client}
-        phone={phone}
-        party_size={party_size}
-        reserve_date={reserve_date}
-        reserved_time={reserved_time}
-        submitForm={submitForm}
-        handleChange={handleChange}
-      />
+          client={client}
+          phone={phone}
+          party_size={party_size}
+          reserve_date={reserve_date}
+          reserved_time={reserved_time}
+          submitForm={submitForm}
+          handleChange={handleChange}
+        />
+      </div>
+      </div>
     );
   }
 }
@@ -63,4 +73,3 @@ const ConnectReservationPage = connect(state => ({
   reservations: state.reservations
 }));
 export default ConnectReservationPage(ReservationPage);
-

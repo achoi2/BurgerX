@@ -44,12 +44,16 @@ class AdminLoginPage extends Component {
     const { email, user_password } = this.state;
     const { dispatch } = this.props;
     return (
-      <AdminLoginForm
-        email={email}
-        user_password={user_password}
-        submitForm={submitForm}
-        handleChange={handleChange}
-      />
+      <div className="container">
+        <div className="row justify-content-center registreForm">
+          <AdminLoginForm
+            email={email}
+            user_password={user_password}
+            submitForm={submitForm}
+            handleChange={handleChange}
+          />
+        </div>
+      </div>
     );
   }
 }
