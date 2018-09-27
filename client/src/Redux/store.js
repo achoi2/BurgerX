@@ -4,12 +4,10 @@ import reducer from "./reducers.js";
 let initialState = {
   menu: [],
   cartItems: [],
-  backlog:[],
-  reservations:[],
-  admin:[]
+  backlog: [],
+  reservations: [],
+  admin: []
 };
-
-
 
 let store = createStore(
   reducer,
