@@ -16,6 +16,7 @@ CREATE TABLE reservations (
 CREATE TABLE menu (
   id SERIAL PRIMARY KEY,
   title VARCHAR(255),
+  imageurl VARCHAR,
   details VARCHAR(255),
   price INTEGER,
   thumbsup INTEGER
@@ -26,6 +27,5 @@ CREATE TABLE cartItems (
   title VARCHAR(255),
   details VARCHAR(255),
   price INTEGER,
-  thumbsup INTEGER,
-  cartItem FOREIGN KEY (cart_id) REFERENCES menu (id)
+  thumbsup INTEGER
 );
