@@ -20,3 +20,12 @@ CREATE TABLE menu (
   price INTEGER,
   thumbsup INTEGER
 );
+
+CREATE TABLE cartItems (
+  cart_id SERIAL PRIMARY KEY,
+  title VARCHAR(255),
+  details VARCHAR(255),
+  price INTEGER,
+  thumbsup INTEGER,
+  cartItem FOREIGN KEY (cart_id) REFERENCES menu (id)
+);
