@@ -1,6 +1,7 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
-const ManagementOptions = () => {
+const ManagementOptions = (props) => {
   return (
     <div className="card-deck">
       <div className="card">
@@ -9,9 +10,15 @@ const ManagementOptions = () => {
           <p className="card-text">
             Use this feature to edit the menu in any way that meets your needs.
           </p>
-          <button className="btn btn-primary mr-5">Add To Menu</button>
-          <button className="btn btn-secondary">Update Menu</button>
-          <button className="btn btn-danger ml-5 mt-3">Delete From Menu</button>
+          <button className="btn btn-primary mr-5"  onClick={() => {
+          props.history.push("/management/add");
+          }}>Add To Menu</button>
+          <button className="btn btn-secondary" onClick={() => {
+          props.history.push("/management/update");
+          }}>Update Menu</button>
+          <button className="btn btn-danger ml-5 mt-3" onClick={() => {
+          props.history.push("/management/delete");
+          }}>Delete From Menu</button>
         </div>
       </div>
       <div className="card">
@@ -38,4 +45,4 @@ const ManagementOptions = () => {
   );
 };
 
-export default ManagementOptions;
+export default withRouter(ManagementOptions);
