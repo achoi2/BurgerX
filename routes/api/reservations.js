@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const DB = require("../../database");
+const { DB } = require("../../database");
 
 router.get("/", (req, res) => {
   DB.any("SELECT * FROM reservations")
