@@ -33,14 +33,11 @@ let initialState = {
     }
   ],
   cartItems: [],
-  reservations:[],
   backlog:[],
   admin:[]
 };
 
-const URL = "http://localhost:5000/api/menu/";
-const response = fetch(URL);
-console.log(response);
+
 
 let store = createStore(
   reducer,
