@@ -33,21 +33,10 @@ router.post("/register", (req, res) => {
   });
 });
 
-// router.post("/login", validateToken, (req, res) => {
-//   bcrypt
-//     .compare(req.body.user_password, req.body.user_password, (err, success) => {
-//       if (err) {
-//         return res.status(401).json({ msg: "Auth Failed" });
-//       }
-//       if (success) {
-//         const token = jwt.sign({ id: users.id }, JwtPassword, {
-//           expiresIn: "1h"
-//         });
-//         return res.status(200).json({ msg: "Authorized", token: token });
-//       }
-//       res.status(401).json({ msg: "Auth Failed" });
-//     });
-// });
+router.delete('/delete/:id', (req,res) => {
+  let menuItem = req.params.id;
+  DB.any(`DELETE FROM menu WHERE id=${menuItem}`).then(() => res.send(`DELETED ITEM`));
+});
 
 
 module.exports = router;
