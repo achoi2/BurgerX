@@ -19,7 +19,13 @@ class GetReservationsPage extends React.Component {
 
   render() {
     const { reserved } = this.state;
-    return <DisplayReservations reserved={reserved} />;
+    return (
+      <div className="container">
+        <div className="row justify-content-center">
+        <DisplayReservations reserved={reserved} />
+        </div>
+      </div>
+    )
   }
 }
 

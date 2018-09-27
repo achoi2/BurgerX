@@ -2,21 +2,25 @@ import React from "react";
 
 const DisplayReservations = ({ reserved }) => {
   return (
-    <div>
+    <div className="card-deck">
       {reserved.map(data => {
         return (
-          <div key={data.id}>
-            <ul>
-              <li>
-                <p>{data.client}</p>
+          <div className="card" key={data.id} style={{width:'50rem'}}>
+            <div className="card-body">
+              <div className="card-title">{data.client}</div>
+              <div className="card-text">
                 <p>{data.phone}</p>
-              </li>
-            </ul>
+                <p>{data.party_size}</p>
+                <p>{data.reserve_date}</p>
+                <p>{data.reserved_time}</p>
+              </div>
+            </div>
           </div>
         );
       })}
     </div>
   );
 };
+
 
 export default DisplayReservations;
