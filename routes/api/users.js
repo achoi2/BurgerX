@@ -34,8 +34,8 @@ router.post("/register", (req, res) => {
 });
 
 router.delete('/delete/:id', (req,res) => {
-  let menuItem = req.params.id;
-  DB.any(`DELETE FROM menu WHERE id=${menuItem}`).then(() => res.send(`DELETED ITEM`));
+  let menuItemID = req.params.id;
+  DB.any(`DELETE FROM menu WHERE id=${menuItemID}`).then(() => res.send(`DELETED ITEM`));
 });
 
 
