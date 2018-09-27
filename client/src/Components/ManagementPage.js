@@ -1,5 +1,5 @@
-import React from 'react'
-import ManagementOptions from './ManagementOptions';
+import React from "react";
+import ManagementOptions from "./ManagementOptions";
 
 const ManagementPage = () => {
   return (
@@ -8,9 +8,9 @@ const ManagementPage = () => {
         <div className="col col-md">
           <ManagementOptions/>
         </div>
-      </div> 
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default ManagementPage;

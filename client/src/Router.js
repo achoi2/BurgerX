@@ -9,6 +9,10 @@ import ReservationPage from './Components/ReservationPage';
 import GetReservationsPage from './Components/GetReservationsPage';
 import AdminLoginPage from './Components/AdminLoginPage';
 import ManagementPage from './Components/ManagementPage';
+import AddToMenu from './Components/AdminCRUD/AddToMenu';
+import UpdateMenu from './Components/AdminCRUD/UpdateMenu';
+import DeleteFromMenu from './Components/AdminCRUD/DeleteFromMenu';
+
 
 const Router = () => {
   return (
@@ -23,6 +27,9 @@ const Router = () => {
           <Route exact path="/reserved" component={GetReservationsPage} />
           <Route exact path="/admin" component={AdminLoginPage} />
           <Route exact path="/management" component={ManagementPage} />
+          <Route exact path="/management/add" component={AddToMenu} />
+          <Route exact path="/management/update" component={UpdateMenu} />
+          <Route exact path="/management/delete" component={DeleteFromMenu} />
         </Switch>
         <Footer />
       </div>

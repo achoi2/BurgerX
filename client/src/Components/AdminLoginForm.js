@@ -22,7 +22,7 @@ const AdminLoginForm = ({ email, user_password, handleChange, submitForm }) => {
                 placeholder="password"
               />
             </div>
-            <button className="btn btn-primary">Register</button>
+            <button className="btn btn-primary">Login</button>
           </form>
         </div>
       </div>

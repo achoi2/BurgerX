@@ -29,7 +29,7 @@ const ReservationForm =  ({ client,phone,party_size,reserve_date,reserved_time, 
       </div>
       <div className="form-group">
         <input
-          type="text"
+          type="time"
           value={reserved_time}
           onChange={e => handleChange(e, "reserved_time")}
           placeholder="reserve_time"
@@ -37,7 +37,7 @@ const ReservationForm =  ({ client,phone,party_size,reserve_date,reserved_time, 
       </div>
       <div className="form-group">
         <input
-          type="text"
+          type="date"
           value={reserve_date}
           onChange={e => handleChange(e, "reserve_date")}
           placeholder="reserve_date"
