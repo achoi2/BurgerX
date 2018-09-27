@@ -8,6 +8,7 @@ const AdminLoginForm = ({ email, user_password, handleChange, submitForm }) => {
           <form onSubmit={submitForm} className="form-group">
             <div className="form-group">
               <input
+                className="form-control"
                 type="text"
                 value={email}
                 placeholder="email"
@@ -16,6 +17,7 @@ const AdminLoginForm = ({ email, user_password, handleChange, submitForm }) => {
             </div>
             <div className="form-group">
               <input
+                className="form-control"
                 type="password"
                 value={user_password}
                 onChange={e => handleChange(e, "user_password")}

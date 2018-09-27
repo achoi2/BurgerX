@@ -5,6 +5,7 @@ const ReservationForm =  ({ client,phone,party_size,reserve_date,reserved_time, 
     <form onSubmit={submitForm}>
       <div className="form-group">
         <input
+          className="form-control"
           type="text"
           value={client}
           onChange={e => handleChange(e, "client")}
@@ -13,6 +14,7 @@ const ReservationForm =  ({ client,phone,party_size,reserve_date,reserved_time, 
       </div>
       <div className="form-group">
         <input
+          className="form-control"
           type="text"
           value={phone}
           onChange={e => handleChange(e, "phone")}
@@ -21,6 +23,7 @@ const ReservationForm =  ({ client,phone,party_size,reserve_date,reserved_time, 
       </div>
       <div className="form-group">
         <input
+          className="form-control"
           type="number"
           placeholder="party size"
           value={party_size}
@@ -29,6 +32,7 @@ const ReservationForm =  ({ client,phone,party_size,reserve_date,reserved_time, 
       </div>
       <div className="form-group">
         <input
+          className="form-control"
           type="time"
           value={reserved_time}
           onChange={e => handleChange(e, "reserved_time")}
@@ -37,6 +41,7 @@ const ReservationForm =  ({ client,phone,party_size,reserve_date,reserved_time, 
       </div>
       <div className="form-group">
         <input
+          className="form-control"
           type="date"
           value={reserve_date}
           onChange={e => handleChange(e, "reserve_date")}
