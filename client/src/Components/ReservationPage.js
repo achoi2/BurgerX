@@ -53,63 +53,71 @@ class ReservationPage extends React.Component {
 
     return (
       <div className="container p-5">
+      <div className="text-center mt-3">
+          <h1>Reserve a Table</h1>
+        </div>
         <div className="row justify-content-center reservationForm">
           <div className="form-group">
             <label>
               Name <strong style={Styles.wildcard}>*</strong>
             </label>
             <form onSubmit={submitForm} className="form-group">
-              <div className="form-control">
+              <div>
                 <input
                   type="text"
                   value={client}
                   required={true}
                   onChange={e => handleChange(e, "client")}
                   placeholder="Name"
+                  className="form-control"
                 />
               </div>
               <div className="form-group">
                 <label>
                   Phone <strong style={Styles.wildcard}>*</strong>
                 </label>
-                <div className="form-control">
+                <div>
                   <input
                     type="tel"
                     value={phone}
                     required={true}
                     onChange={e => handleChange(e, "phone")}
                     placeholder="Phone Number"
+                    className="form-control"
                   />
                 </div>
               </div>
-              <div className="form-group">
+              <div>
                 <label>Party Size</label>
-                <div className="form-control">
+                <div>
                   <input
                     type="number"
                     placeholder="party size"
                     value={party_size}
                     onChange={e => handleChange(e, "party_size")}
+                    className="form-control"
                   />
                 </div>
               </div>
-              <div className="form-group">
+              <div>
                 <ReservationTimeInput
                   value={reserved_time}
                   required={true}
                   onChange={e => handleChange(e, "reserved_time")}
+                  className="form-control"
                 />
               </div>
-              <div className="form-group">
+              <div>
                 <label>
                   Date <strong style={Styles.wildcard}>*</strong>
                 </label>
-                <div className="form-control">
+                <div>
                   <input
                     type="date"
                     value={reserve_date}
                     required={true}
                     onChange={e => handleChange(e, "reserve_date")}
+                    className="form-control"
                   />
                 </div>
               </div>

@@ -18,7 +18,7 @@
 
 .image {
   background-image: url(../Media/spacex.jpg);
-  height: 27em;
+  height: 33em;
   background-size: cover;                    
   background-repeat: no-repeat;
   background-position: top center;  
@@ -37,7 +37,7 @@
 
 .pic {
   width: 23em;
-  height: 14em;
+  height: 15em;
 }
 
 @media only screen and (max-width: 1112px) {

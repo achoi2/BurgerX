@@ -24,10 +24,10 @@ const LandingPage = () => {
         <div className="musk-info-text">
             <div>
               <h3>
-                Hi, my name's Elon
+                Hi, my name is Elon
             </h3>
               <p>
-                I'm a business magnet and CEO of BurgerX. Feel free to savour our delicious menu, place a takeout order or reserve a table. Not only is our food fast, it's also semi-autonomous.
+                I am a business magnet and CEO of BurgerX. Feel free to savour our delicious menu, place a takeout order or reserve a table. Not only is our food fast, it's also semi-autonomous.
             </p>
               <p>
                 Bon Appétit, and don't forget: the percentage of intelligence which is not human is increasing.
