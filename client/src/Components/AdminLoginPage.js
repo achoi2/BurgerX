@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import AdminLoginForm from "./AdminLoginForm";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import ReusableForm from "./ReusableForms";
 
 class AdminLoginPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       email: "",
-      user_password: "",
+      user_password: ""
     };
   }
 
@@ -34,8 +34,6 @@ class AdminLoginPage extends Component {
       this.setState(newState);
     };
 
-
-
     let submitForm = e => {
       e.preventDefault();
       loginAdmin(this.state);
@@ -49,12 +47,33 @@ class AdminLoginPage extends Component {
     return (
       <div className="container p-5">
         <div className="row justify-content-center registreForm">
-          <AdminLoginForm
-            email={email}
-            user_password={user_password}
-            submitForm={submitForm}
-            handleChange={handleChange}
-          />
+          <div className="form-group">
+            <label>
+              Email <strong style={Styles.wildcard}>*</strong>
+            </label>
+            <form onSubmit={submitForm} className="form-group">
+              <ReusableForm
+                type="email"
+                onChange={e => handleChange(e, "email")}
+                required={true}
+                value={email}
+                placeholder="Email"
+              />
+              <div className="form-group">
+                <label>
+                  Password <strong style={Styles.wildcard}>*</strong>
+                </label>
+                <ReusableForm
+                  type="password"
+                  onChange={e => handleChange(e, "user_password")}
+                  required={true}
+                  value={user_password}
+                  placeholder="Password"
+                />
+              </div>
+              <button className="btn btn-primary">Log in</button>
+            </form>
+          </div>
         </div>
       </div>
     );
@@ -65,3 +84,9 @@ const ConnectAdminPage = connect(state => ({
   admin: state.admin
 }));
 export default withRouter(ConnectAdminPage(AdminLoginPage));
+
+const Styles = {
+  wildcard:{
+    color:'red'
+  }
+}

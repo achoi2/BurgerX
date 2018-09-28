@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import DeleteFromMenuForm from "./CRUD Operations/DeleteFromMenuForm";
+import {AdminDeleteForm} from '../ReusableForms';
 
 class DeleteFromMenu extends Component {
   constructor(props) {
@@ -39,11 +39,13 @@ class DeleteFromMenu extends Component {
     return (
       <div className="container">
         <div className="row justify-content-center registreForm">
-          <DeleteFromMenuForm
-          id={id}
-            submitForm={submitForm}
-            handleChange={handleChange}
-          />
+            <AdminDeleteForm
+              onSubmit={submitForm}
+              type="number"
+              name="Id"
+              value={id}
+              onChange={e => handleChange(e, "id")}
+            />
         </div>
       </div>
     );
