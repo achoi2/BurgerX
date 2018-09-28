@@ -51,7 +51,7 @@ class AdminLoginPage extends Component {
               Email <strong style={Styles.wildcard}>*</strong>
             </label>
             <form onSubmit={submitForm} className="form-group">
-              <div>
+              <div className="form-control">
                 <input
                   type="email"
                   onChange={e => handleChange(e, "email")}
@@ -64,7 +64,7 @@ class AdminLoginPage extends Component {
                 <label>
                   Password <strong style={Styles.wildcard}>*</strong>
                 </label>
-                <div>
+                <div className="form-control">
                   <input
                     type="password"
                     onChange={e => handleChange(e, "user_password")}

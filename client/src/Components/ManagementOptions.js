@@ -13,7 +13,7 @@ const ManagementOptions = (props) => {
           <button className="btn btn-primary mb-3 mr-3"  onClick={() => {
           props.history.push("/management/add");
           }}>Add a Menu Item</button>
-          <button className="btn btn-danger ml-5 mt-3" onClick={() => {
+          <button className="btn btn-danger mt-3" onClick={() => {
           props.history.push("/management/delete");
           }}>Delete a Menu Item</button>
         </div>

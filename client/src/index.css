@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background:lightskyblue;
 }
 
 :root {
@@ -16,14 +17,14 @@ body {
 
 .registreForm {
   box-shadow: var(--shadow);
-  width: 30%;
+  width: 100%;
   margin: 0 auto;
   padding: 1rem;
 }
 
 .reservationForm {
   box-shadow: var(--shadow);
-  width: 30%;
+  width: 100%;
   margin: 0 auto;
   padding: 1rem;
 }

@@ -59,7 +59,7 @@ class ReservationPage extends React.Component {
               Name <strong style={Styles.wildcard}>*</strong>
             </label>
             <form onSubmit={submitForm} className="form-group">
-              <div>
+              <div className="form-control">
                 <input
                   type="text"
                   value={client}
@@ -72,7 +72,7 @@ class ReservationPage extends React.Component {
                 <label>
                   Phone <strong style={Styles.wildcard}>*</strong>
                 </label>
-                <div>
+                <div className="form-control">
                   <input
                     type="tel"
                     value={phone}
@@ -84,7 +84,7 @@ class ReservationPage extends React.Component {
               </div>
               <div className="form-group">
                 <label>Party Size</label>
-                <div>
+                <div className="form-control">
                   <input
                     type="number"
                     placeholder="party size"
@@ -104,7 +104,7 @@ class ReservationPage extends React.Component {
                 <label>
                   Date <strong style={Styles.wildcard}>*</strong>
                 </label>
-                <div>
+                <div className="form-control">
                   <input
                     type="date"
                     value={reserve_date}
