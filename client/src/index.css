@@ -10,6 +10,11 @@ body {
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
+.navbar {
+  position: fixed;
+  width: 100%;
+}
+
 .registreForm {
   box-shadow: var(--shadow);
   width: 30%;
