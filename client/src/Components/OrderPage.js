@@ -57,7 +57,7 @@ class OrderPage extends React.Component {
 
     return (
       <div className="container p-5">
-      <div className="row justify-content-center reservationForm">
+      <div className="row justify-content-center reservationForm bg-dark">
       <OrderForm
           client={client}
           phone={phone}

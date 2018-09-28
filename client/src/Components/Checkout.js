@@ -13,13 +13,15 @@ const OrdersList = (props) => {
     props.dispatch({ type: 'REMOVE_ITEM', payload: item  })
   }
   return (
-    <div>
+    <div className="container justify-content-center">
+      <div className="text-center mt-3">
+          <h1>Place Takeout Order</h1>
+        </div>
       {props.cartItems.map(item => {
-        return <li key={item.id}>
-        {item.title}
-        {item.price}
-          <button onClick={() => removeOrder(item)} className="btn btn-danger">Remove</button>
-        </li>
+        return <h3 key={item.id} className="bg-light mb-3" style={{width:'30%'}}>
+        {`${item.title} - $${item.price}`}
+          <button onClick={() => removeOrder(item)} className="btn-sm btn-danger m-3">Remove</button>
+        </h3>
       })}
       <h3>Your total is ${total}</h3>
       <OrderPage/>

@@ -45,31 +45,33 @@ class AdminLoginPage extends Component {
 
     return (
       <div className="container p-5">
-        <div className="row justify-content-center registreForm">
+        <div className="row justify-content-center registreForm bg-white">
           <div className="form-group">
             <label>
               Email <strong style={Styles.wildcard}>*</strong>
             </label>
             <form onSubmit={submitForm} className="form-group">
-              <div className="form-control">
+              <div>
                 <input
                   type="email"
                   onChange={e => handleChange(e, "email")}
                   required={true}
                   value={email}
                   placeholder="Email"
+                  className="form-control"
                 />
               </div>
               <div className="form-group">
                 <label>
                   Password <strong style={Styles.wildcard}>*</strong>
                 </label>
-                <div className="form-control">
+                <div>
                   <input
                     type="password"
                     onChange={e => handleChange(e, "user_password")}
                     required={true}
                     value={user_password}
+                    className="form-control"
                     placeholder="Password"
                   />
                 </div>

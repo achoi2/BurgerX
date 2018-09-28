@@ -20,6 +20,9 @@ class MenuPage extends React.Component {
   render() {
     return (
       <div className="container">
+        <div className="text-center mt-3">
+          <h1>Browse our Menu</h1>
+        </div>
         <div className="row justify-content-center">
           {this.state.menu.map(item => {
             return (
@@ -31,10 +34,10 @@ class MenuPage extends React.Component {
                     alt="Card"
                   />
                   <div className="card-body">
-                    <div className="card-title">{item.title}</div>
+                    <h2 className="card-title">{item.title}</h2>
                     <div className="card-text">
                       {item.details}
-                      <div className="card-text">{item.price}</div>
+                      <h3 className="card-text mt-3 mb-2">{`$${item.price}`}</h3>
                     </div>
                     <button style={Styles.like}>{`${item.thumbsup}👍`}</button>
                     <button
@@ -63,12 +66,12 @@ const Styles = {
     padding:'1rem',
   },
   card:{
-    width:'15rem',
-    height:'25rem'
+    width:'18rem',
+    height:'32rem'
   },
   like: {
     padding:'0.3rem',
     marginRight:'0.5rem'
-  }
+  },
 }
 
