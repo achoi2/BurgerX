@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import ReservationForm from "./ReservationForm";
+import ReservationTimeInput from "./ReusableForms";
 
 class ReservationPage extends React.Component {
   constructor(props) {
@@ -53,17 +53,70 @@ class ReservationPage extends React.Component {
 
     return (
       <div className="container p-5">
-      <div className="row justify-content-center reservationForm">
-      <ReservationForm
-          client={client}
-          phone={phone}
-          party_size={party_size}
-          reserve_date={reserve_date}
-          reserved_time={reserved_time}
-          submitForm={submitForm}
-          handleChange={handleChange}
-        />
-      </div>
+        <div className="row justify-content-center reservationForm">
+          <div className="form-group">
+            <label>
+              Name <strong style={Styles.wildcard}>*</strong>
+            </label>
+            <form onSubmit={submitForm} className="form-group">
+              <div>
+                <input
+                  type="text"
+                  value={client}
+                  required={true}
+                  onChange={e => handleChange(e, "client")}
+                  placeholder="Name"
+                />
+              </div>
+              <div className="form-group">
+                <label>
+                  Phone <strong style={Styles.wildcard}>*</strong>
+                </label>
+                <div>
+                  <input
+                    type="tel"
+                    value={phone}
+                    required={true}
+                    onChange={e => handleChange(e, "phone")}
+                    placeholder="Phone Number"
+                  />
+                </div>
+              </div>
+              <div className="form-group">
+                <label>Party Size</label>
+                <div>
+                  <input
+                    type="number"
+                    placeholder="party size"
+                    value={party_size}
+                    onChange={e => handleChange(e, "party_size")}
+                  />
+                </div>
+              </div>
+              <div className="form-group">
+                <ReservationTimeInput
+                  value={reserved_time}
+                  required={true}
+                  onChange={e => handleChange(e, "reserved_time")}
+                />
+              </div>
+              <div className="form-group">
+                <label>
+                  Date <strong style={Styles.wildcard}>*</strong>
+                </label>
+                <div>
+                  <input
+                    type="date"
+                    value={reserve_date}
+                    required={true}
+                    onChange={e => handleChange(e, "reserve_date")}
+                  />
+                </div>
+              </div>
+              <button className="btn btn-primary">Add Reservation</button>
+            </form>
+          </div>
+        </div>
       </div>
     );
   }
@@ -73,3 +126,9 @@ const ConnectReservationPage = connect(state => ({
   reservations: state.reservations
 }));
 export default ConnectReservationPage(ReservationPage);
+
+const Styles = {
+  wildcard: {
+    color: "red"
+  }
+};
