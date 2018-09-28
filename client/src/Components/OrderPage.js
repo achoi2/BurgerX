@@ -26,13 +26,6 @@ class OrderPage extends React.Component {
     this.props.cartItems.forEach(item => {
         itemString+= `1 ${item.title}, `;
     })
-
-    this.state = {
-      ...this.state,
-      items: itemString
-    }
-
-    console.log(this.state);
     
     let postOrder = async state => {
       await fetch("http://localhost:5000/api/orders/new", {
