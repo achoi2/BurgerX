@@ -10,10 +10,10 @@ const ManagementOptions = (props) => {
           <p className="card-text">
             Use this feature to edit the menu in any way that meets your needs.
           </p>
-          <button className="btn btn-primary mr-5"  onClick={() => {
+          <button className="btn btn-primary mb-3 mr-3"  onClick={() => {
           props.history.push("/management/add");
           }}>Add To Menu</button>
-          <button className="btn btn-secondary" onClick={() => {
+          <button className="btn btn-secondary mb-3" onClick={() => {
           props.history.push("/management/update");
           }}>Update Menu</button>
           <button className="btn btn-danger ml-5 mt-3" onClick={() => {
@@ -28,7 +28,7 @@ const ManagementOptions = (props) => {
             Use this feature to keep track of current reservations to all of
             your restaurants.
           </p>
-          <button className="btn btn-primary">View Reservations</button>
+          <button className="btn btn-primary" onClick={() => {props.history.push('/reserved')}}>View Reservations</button>
         </div>
       </div>
       <div className="card">
@@ -46,3 +46,4 @@ const ManagementOptions = (props) => {
 };
 
 export default withRouter(ManagementOptions);
+

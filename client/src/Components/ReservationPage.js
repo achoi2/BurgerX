@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import Form from "./ReservationForm";
+import ReservationForm from "./ReservationForm";
 
 class ReservationPage extends React.Component {
   constructor(props) {
@@ -52,9 +52,9 @@ class ReservationPage extends React.Component {
     };
 
     return (
-      <div className="container">
-      <div className="row justify-content-center registreForm">
-      <Form
+      <div className="container p-5">
+      <div className="row justify-content-center reservationForm">
+      <ReservationForm
           client={client}
           phone={phone}
           party_size={party_size}
