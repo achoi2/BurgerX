@@ -1,9 +1,9 @@
 import React from "react";
 
-const ReservationForm =  ({ title,imageurl,details,price,thumbsup, submitForm, handleChange }) => {
+const AddMenuForm =  ({ title,imageurl,details,price,thumbsup, submitForm, handleChange }) => {
   return (
     <div className="container p-5">
-      <div className="row justify-content-center reservationForm">
+      <div className="row justify-content-center AddMenuForm">
         <form onSubmit={submitForm}>
           <div className="form-group">
             <input
@@ -52,4 +52,4 @@ const ReservationForm =  ({ title,imageurl,details,price,thumbsup, submitForm, h
   );
 };
 
-export default ReservationForm;
+export default AddMenuForm;

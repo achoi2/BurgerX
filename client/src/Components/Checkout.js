@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import OrderPage from "./OrderPage";
 
 const OrdersList = (props) => {
   let total = 0;
@@ -21,7 +22,7 @@ const OrdersList = (props) => {
         </li>
       })}
       <h3>Your total is ${total}</h3>
-      <button className="btn btn-primary">Checkout</button>
+      <OrderPage/>
     </div>
   );
 };

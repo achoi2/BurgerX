@@ -10,9 +10,7 @@ const DisplayOrders = ({ orders }) => {
               <div className="card-title">{data.client}</div>
               <div className="card-text">
                 <p>{data.phone}</p>
-                <ul>
-                  
-                </ul>
+                <p>{data.items}</p>
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
 }
 

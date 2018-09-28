@@ -41,8 +41,12 @@ const reducers = (oldState, action) => {
             ...oldState,
             menu: deleteItem
         } 
-    }
-    else if(action.type === 'UPDATE') {
+    } else if (action.type === "PLACE_ORDER") { 
+        return {
+            ...oldState,
+            cartItems: []
+        } 
+    } else if(action.type === 'UPDATE') {
       const updatedMenu = {
           title: action.title,
           details: action.details,
