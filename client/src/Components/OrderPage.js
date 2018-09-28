@@ -28,7 +28,7 @@ class OrderPage extends React.Component {
     })
     
     let postOrder = async state => {
-      await fetch("http://localhost:5000/api/orders/new", {
+      await fetch("http://burgerx.fun:5000/api/orders/new", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

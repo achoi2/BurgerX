@@ -25,7 +25,7 @@ class AddToMenuPage extends React.Component {
     const { dispatch } = this.props;
 
     let postNewItem = async state => {
-      await fetch("http://localhost:5000/api/menu/newitem", {
+      await fetch("//burgerx.fun:5000/api/menu/newitem", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

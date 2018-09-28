@@ -10,7 +10,7 @@ class MenuPage extends React.Component {
   }
 
   async componentDidMount() {
-    const URL = "http://localhost:5000/api/menu/";
+    const URL = "http://burgerx.fun:5000/api/menu/";
     const response = await fetch(URL);
     const result = await response.json();
     this.setState({ menu: result });

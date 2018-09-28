@@ -25,7 +25,7 @@ class ReservationPage extends React.Component {
     const { dispatch } = this.props;
 
     let postReservation = async state => {
-      await fetch("http://localhost:5000/api/reservations/reserve", {
+      await fetch("http://burgerx.fun:5000/api/reservations/reserve", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
