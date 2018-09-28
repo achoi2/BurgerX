@@ -37,5 +37,17 @@
 
 .pic {
   width: 23em;
-  height: 100%;
+  height: 14em;
+}
+
+@media only screen and (max-width: 1112px) {
+  .musk-info {
+  background-color: lightsteelblue;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2em;
+}
+
 }
