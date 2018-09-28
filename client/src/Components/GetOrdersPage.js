@@ -10,7 +10,7 @@ class GetOrdersPage extends React.Component {
   }
 
   async componentDidMount() {
-    const URL = "http://localhost:5000/api/orders/";
+    const URL = "http://burgerx.fun:5000/api/orders/";
     const response = await fetch(URL);
     const result = await response.json();
     this.setState({ orders: result });

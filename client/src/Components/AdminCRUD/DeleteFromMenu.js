@@ -15,7 +15,7 @@ class DeleteFromMenu extends Component {
     const { dispatch } = this.props;
 
     let deleteFromMenu =  id => {
-      let url = `http://localhost:5000/api/users/delete/${id}`;
+      let url = `//burgerx.fun:5000/api/users/delete/${id}`;
       fetch(url, {
         method: "DELETE"
       })
