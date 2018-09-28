@@ -8,11 +8,14 @@ class AdminLoginPage extends Component {
     super(props);
     this.state = {
       email: "",
-      user_password: ""
+      user_password: "",
     };
   }
 
   render() {
+    const { email, user_password } = this.state;
+    const { dispatch } = this.props;
+
     let loginAdmin = async state => {
       await fetch(`http://localhost:5000/api/users/register`, {
         method: "POST",
@@ -31,6 +34,8 @@ class AdminLoginPage extends Component {
       this.setState(newState);
     };
 
+
+
     let submitForm = e => {
       e.preventDefault();
       loginAdmin(this.state);
@@ -41,8 +46,6 @@ class AdminLoginPage extends Component {
       });
     };
 
-    const { email, user_password } = this.state;
-    const { dispatch } = this.props;
     return (
       <div className="container p-5">
         <div className="row justify-content-center registreForm">

@@ -7,18 +7,22 @@ const AdminLoginForm = ({ email, user_password, handleChange, submitForm }) => {
         <div className="col-md">
           <form onSubmit={submitForm} className="form-group">
             <div className="form-group">
+              <label>Email <strong style={Styles.wildcard}>*</strong></label>
               <input
                 className="form-control"
-                type="text"
+                type="email"
+                required={true}
                 value={email}
                 placeholder="email"
                 onChange={e => handleChange(e, "email")}
               />
             </div>
             <div className="form-group">
+            <label>Password <strong style={Styles.wildcard}>*</strong></label>
               <input
                 className="form-control"
                 type="password"
+                required={true}
                 value={user_password}
                 onChange={e => handleChange(e, "user_password")}
                 placeholder="password"
@@ -33,3 +37,9 @@ const AdminLoginForm = ({ email, user_password, handleChange, submitForm }) => {
 };
 
 export default AdminLoginForm;
+
+const Styles = {
+  wildcard:{
+    color:'red'
+  }
+}
