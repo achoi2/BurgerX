@@ -18,17 +18,21 @@ const LandingPage = () => {
       </div>
             
       <div className="musk-info">
-            <img className="pic" src={musk} alt="musk"/>
+        <div>
+          <img className="img-fluid pic" src={musk} alt="musk" />
+        </div>
         <div className="musk-info-text">
-            <h3>
-              Hi, my name's Elon
+            <div>
+              <h3>
+                Hi, my name's Elon
             </h3>
-            <p>
-              I'm a business magnet and CEO of BurgerX. Feel free to savour our delicious menu, place a takeout order or reserve a table. Not only is our food fast, it's also semi-autonomous.
+              <p>
+                I'm a business magnet and CEO of BurgerX. Feel free to savour our delicious menu, place a takeout order or reserve a table. Not only is our food fast, it's also semi-autonomous.
             </p>
-            <p>
-              Bon Appétit, and don't forget: the percentage of intelligence which is not human is increasing.
+              <p>
+                Bon Appétit, and don't forget: the percentage of intelligence which is not human is increasing.
             </p>
+            </div>  
         </div>
       </div>
       </div>
