@@ -12,21 +12,23 @@ const ReservationForm = ({
   return (
     <form onSubmit={submitForm}>
       <div className="form-group">
-        <label>Name</label>
+        <label>Name <strong style={Styles.wildcard}>*</strong></label>
         <input
           className="form-control"
           type="text"
           value={client}
+          required={true}
           onChange={e => handleChange(e, "client")}
           placeholder="name"
         />
       </div>
       <div className="form-group">
-        <label>Number</label>
+        <label>Phone <strong style={Styles.wildcard}>*</strong></label>
         <input
           className="form-control"
           type="tel"
           value={phone}
+          required={true}
           onChange={e => handleChange(e, "phone")}
           placeholder="phone"
         />
@@ -42,10 +44,11 @@ const ReservationForm = ({
         />
       </div>
       <div className="form-group">
-        <label>Time</label>
+        <label>Time <strong style={Styles.wildcard}>*</strong></label>
         <select className="form-control">
           <option
             value={reserved_time}
+            required={true}
             onChange={e => handleChange(e, "reserved_time")}
           >
             6: 00 PM
@@ -76,6 +79,7 @@ const ReservationForm = ({
           className="form-control"
           type="date"
           value={reserve_date}
+          required={true}
           onChange={e => handleChange(e, "reserve_date")}
           placeholder="reserve_date"
         />
@@ -87,3 +91,8 @@ const ReservationForm = ({
 
 export default ReservationForm;
 
+const Styles = {
+  wildcard:{
+    color:'red'
+  }
+}
