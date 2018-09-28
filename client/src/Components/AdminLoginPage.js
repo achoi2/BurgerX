@@ -44,7 +44,7 @@ class AdminLoginPage extends Component {
     const { email, user_password } = this.state;
     const { dispatch } = this.props;
     return (
-      <div className="container">
+      <div className="container p-5">
         <div className="row justify-content-center registreForm">
           <AdminLoginForm
             email={email}
