@@ -26,7 +26,7 @@ class MenuPage extends React.Component {
               <div className="card-deck" style={Styles.deck}>
                 <div className="card" style={Styles.card}>
                   <img
-                    class="card-img-top menu_items"
+                    className="card-img-top menu_items"
                     src={item.imageurl}
                     alt="Card"
                   />

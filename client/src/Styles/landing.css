@@ -1,11 +1,41 @@
+.landing {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.musk-info {
+  background-color: lightsteelblue;
+  width: 100%;
+  display: flex;
+}
+
+.musk-info-text {
+  width: 60%;
+  padding: 2em;
+}
+
 .image {
   background-image: url(../Media/spacex.jpg);
-  height: 28em;
-  background-size: cover;
-  background-position: center;
+  height: 27em;
+  background-size: cover;                    
+  background-repeat: no-repeat;
+  background-position: top center;  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.title {
+  font-size: 6em;
+  padding: .1em;
 }
 
 .pic {
-  width: 25em;
-  height: 20em;
+  width: 23em;
+  height: 100%;
 }

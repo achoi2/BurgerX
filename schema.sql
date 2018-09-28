@@ -22,10 +22,9 @@ CREATE TABLE menu (
   thumbsup INTEGER
 );
 
-CREATE TABLE cartItems (
-  cart_id SERIAL PRIMARY KEY,
-  title VARCHAR(255),
-  details VARCHAR(255),
-  price INTEGER,
-  thumbsup INTEGER
+CREATE TABLE orders (
+  id SERIAL PRIMARY KEY,
+  client VARCHAR(255) UNIQUE,
+  phone VARCHAR(255) UNIQUE,
+  items VARCHAR
 );
