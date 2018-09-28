@@ -52,24 +52,28 @@ class AdminLoginPage extends Component {
               Email <strong style={Styles.wildcard}>*</strong>
             </label>
             <form onSubmit={submitForm} className="form-group">
-              <ReusableForm
-                type="email"
-                onChange={e => handleChange(e, "email")}
-                required={true}
-                value={email}
-                placeholder="Email"
-              />
+              <div>
+                <input
+                  type="email"
+                  onChange={e => handleChange(e, "email")}
+                  required={true}
+                  value={email}
+                  placeholder="Email"
+                />
+              </div>
               <div className="form-group">
                 <label>
                   Password <strong style={Styles.wildcard}>*</strong>
                 </label>
-                <ReusableForm
-                  type="password"
-                  onChange={e => handleChange(e, "user_password")}
-                  required={true}
-                  value={user_password}
-                  placeholder="Password"
-                />
+                <div>
+                  <input
+                    type="password"
+                    onChange={e => handleChange(e, "user_password")}
+                    required={true}
+                    value={user_password}
+                    placeholder="Password"
+                  />
+                </div>
               </div>
               <button className="btn btn-primary">Log in</button>
             </form>
@@ -86,7 +90,7 @@ const ConnectAdminPage = connect(state => ({
 export default withRouter(ConnectAdminPage(AdminLoginPage));
 
 const Styles = {
-  wildcard:{
-    color:'red'
+  wildcard: {
+    color: "red"
   }
-}
+};
