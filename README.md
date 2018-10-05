@@ -1,5 +1,7 @@
 # BurgerX
 
+![](client/src/Media/webpic.png)
+
 
 
 Our user owns several businesses and doesn’t have much free time.
